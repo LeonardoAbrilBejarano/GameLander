@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/lab_ad343_v3">
+  <Resource auth="Container" description="PostgresqlDB Connection" driverClassName="org.postgresql.Driver" initialSize="3" maxActive="100" maxIdle="5" maxWait="200" minIdle="3" name="jdbc/vAuthDS" password="webuser" poolPreparedStatements="false" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/webdb" username="webuser" validationQuery=""/>
+</Context>

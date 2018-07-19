@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+html, body				{ height: 100%; }
+body					{ background: url('../img/bg.png'); margin: 0; overflow: hidden; width: 500px; }
+#moon					{ background: url('../img/moon.png') repeat-x; position: absolute; bottom: 0; height: 150px; width: 100%; min-width: 500px; }
+#landing-pad			{ background: url('../img/landing-pad.png'); left: 50%; margin-left: -200px; position: absolute; height: 150px; width: 400px; bottom: 0; }
+#ship					{ background: url('../img/shipOff.png'); overflow: hidden; position: fixed; width: 100px; height: 100px; left: 50%; margin-left: -50px; z-index: 2; }
+#explode.exploded		{ background: transparent; z-index: 2; position: absolute; display: block; width: 300px; height: 200px; left: 50%; margin-left: -150px; }
+#gauge					{ border: 2px solid #fff; background: rgba(50, 50, 50, 0.7); position: absolute; width: calc(100% - 30px); height: 20px; box-sizing: border-box; margin: 18px 15px; z-index: 3; border-radius: 10px; }
+#gauge::before			{ height: 43px; width: 48px; background: url('../img/fuel.png'); content: ''; position: absolute; z-index: 4; left: -7px; top: -14px; }
+#gauge div				{ background: #85c440; background-image: linear-gradient(to bottom, #b7dc8e, #99ce5f 70%, #85c440); width: 100%; height: 100%; border-radius: 10px; }
+#landing-pad #ms		{ text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff; position: absolute; bottom: 5px; line-height: 31px; font-size: 31px; color: #000; font-family: 'Rubik', sans-serif; width: 100%; text-align: center; }
+#game					{ width: 100%; height: 100%; position: absolute; }
+
+#state					{ display: none; text-align: center; position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.7); color: #fff; z-index: 5; font-family: 'Rubik', sans-serif; }
+#state h1				{ line-height: 70px; font-size: 70px; margin: 0; }
+#state h1.win			{ text-shadow: 2px 0 0 #44CE00, -2px 0 0 #44CE00, 0 2px 0 #44CE00, 0 -2px 0 #44CE00, 1px 1px #44CE00, -1px -1px 0 #44CE00, 1px -1px 0 #44CE00, -1px 1px 0 #44CE00; }
+#state h1.lose			{ text-shadow: 2px 0 0 #f00, -2px 0 0 #f00, 0 2px 0 #f00, 0 -2px 0 #f00, 1px 1px #f00, -1px -1px 0 #f00, 1px -1px 0 #f00, -1px 1px 0 #f00; }
+#state h2				{ margin: 0; }
+#state a				{ transition: background-color 0.5s; margin-top: 35px; display: inline-block; background: #0f0; background-color: #4CAF50; color: #fff; padding: 15px 32px; text-decoration: none; font-size: 16px; }
+#state a:hover			{ background: #72F977; }
+#state .container		{ border-top-left-radius: 40px; border-bottom-right-radius: 40px; height: 300px; padding: 20px; background: rgba(50,50,50,0.7); width: 400px; left: 50%; margin-left: -220px; top: 50%; margin-top: -170px; position: absolute; }
+#state .ads				{ height: 90px; background: #fff; color: #000; margin-top: 25px; }
+
+#login					{ display: block; text-align: center; position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.7); color: #fff; z-index: 5; font-family: 'Rubik', sans-serif; }
+#login a				{ transition: background-color 0.5s; margin-top: 35px; display: inline-block; background: #0f0; background-color: #4CAF50; color: #fff; padding: 15px 32px; text-decoration: none; font-size: 16px; }
+#login a:hover			{ background: #72F977; }
+
+@media(max-width: 450px)
+{
+	#moon 				{ min-width: 300px; }
+	#landing-pad		{ width: 270px; margin-left: -135px; height: 100px; background-size: cover; }
+	#landing-pad #ms	{ bottom: 0; line-height: 25px; font-size: 25px; }
+	
+	#state h1			{ line-height: 50px; font-size: 50px; }
+	#state .container	{ width: 100%; border-radius: 0; left: 0; margin-left: 0; box-sizing: border-box; }
+	#state a			{ margin-top: 15px; }
+}
